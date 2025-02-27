@@ -1,0 +1,41 @@
+<h1>タスクを編集</h1>
+
+<%= form_with model: @task, local: true do |form| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "エラー") %> が発生しました:</h2>
+      <ul>
+        <% @task.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div style="display: flex; align-items: center; margin-bottom: 10px;">
+    <%= form.label :title, "タイトル", style: "width: 80px; margin-right: 10px;" %>
+    <%= form.text_field :title, style: "flex: 1; max-width: 300px;" %>
+  </div>
+
+  <div style="display: flex; align-items: center; margin-bottom: 10px;">
+    <%= form.label :details, "詳細", style: "width: 80px; margin-right: 10px;" %>
+    <%= form.text_area :details, size: "30x5", style: "flex: 1; max-width: 300px;" %>
+  </div>
+
+  <div style="display: flex; align-items: center; margin-bottom: 10px;">
+    <%= form.label :deadline, "締切日", style: "width: 80px; margin-right: 10px;" %>
+    <%= form.date_select :deadline, start_year: Date.today.year, end_year: Date.today.year + 5, 
+                         month_names: ["", "1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"] %>
+  </div>
+
+  <div style="display: flex; align-items: center; margin-bottom: 10px;">
+    <%= form.label :status, "状態", style: "width: 80px; margin-right: 10px;" %>
+    <%= form.select :status, options_for_select([["未完了", "未完了"], ["進行中", "進行中"], ["完了", "完了"]], @task.status), style: "flex: 1; max-width: 150px;" %>
+  </div>
+
+  <div>
+    <%= form.submit "更新する" %>
+  </div>
+<% end %>
+
+<%= link_to '戻る', tasks_path %>
