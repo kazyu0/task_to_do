@@ -35,6 +35,8 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to tasks_path, notice: "タスクが削除されました"
   end
+
+  
   private
 
   # Strong Parameters: 許可するパラメータを指定
