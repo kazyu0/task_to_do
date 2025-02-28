@@ -1,4 +1,3 @@
-# README
 
 アプリケーション名
 Task to do
@@ -66,4 +65,8 @@ has_many :submissions
 belongs_to :task
 belongs_to :user
 
+開発環境
+Ruby on Rails
+Render
+VScode
 
