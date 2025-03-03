@@ -101,15 +101,29 @@ https://task-to-do-49vr.onrender.com
 
 ・VScode
 
+## ローカルでの動作方法
+
+以下のコマンドを順次実行
+
+% git clone https://github.com/kazyu0/task_to_do
+
+% cd study_recall
+
+% bundle install
+
+% rails db:create
+
+% rails db:migrate
+
 ## 工夫したポイント
 
-・操作が分かりやすい
+・操作が分かりやすい。
 
-・学習の進捗状況を簡単に確認できる
+・学習の進捗状況を簡単に確認できる。
 
 ## 改善点
 
-・投稿する際の月が英語になっている点
+・投稿する際の月が英語になっている点。
 
 ## 制作時間
 
