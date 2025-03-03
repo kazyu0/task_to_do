@@ -11,8 +11,8 @@ https://task-to-do-49vr.onrender.com
 
 テスト用アカウント
 ・Basic認証
-〇 ID：admin
-〇 PASS：2222
+ ID:admin
+ PASS:2222
 
 利用方法
 1.新規投稿から学習する内容を投稿します。
@@ -69,4 +69,14 @@ belongs_to :user
 Ruby on Rails
 Render
 VScode
+
+工夫したポイント
+・操作が分かりやすい
+・学習の進捗状況を簡単に確認できる
+
+改善点
+・投稿する際の月が英語になっている点
+
+制作時間
+10日間
 
