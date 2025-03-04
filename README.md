@@ -43,23 +43,17 @@ https://task-to-do-49vr.onrender.com
 | Column             | Type   | Options     |
 |:--|--:|:--:|
 | name               | string | null: false |
-| email              | string | null: false |
-| password           | string | null: false |
-| role               | integer| null: false |
 | id                 | integer| null: false, unique: true  |
 
 ## アソシエーション
 
 ・has_many :tasks
 
-・has_many :submissions
-
 ## Tasks
 | Column             | Type   | Options     |
 |:--|--:|:--:|
 | title              | string | null: false |
 | description        | text   | null: false |
-| deadline           | date   | null: false |
 | created_at         |datetime| null: false |
 | updated_at         |datetime| null: false |
 | id                 | integer| null: false, unique: true  |
@@ -68,30 +62,11 @@ https://task-to-do-49vr.onrender.com
 
 ・belongs_to :user
 
-・has_many :submissions
-
-## Submissions
-| Column             | Type   | Options     |
-|:--|--:|:--:|
-| status             | integer| null: false |
-| user_id            | integer| null: false |
-| task_id            | integer| null: false |
-| created_at         |datetime| null: false |
-| updated_at         |datetime| null: false |
-| id                 | integer| null: false, unique: true  |
-
-## アソシエーション
-
-・belongs_to :task
-
-・belongs_to :user
 
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/52e901e64458b399b8c8b35ed4ab6ecd.png)](https://gyazo.com/52e901e64458b399b8c8b35ed4ab6ecd)
-
+[![Image from Gyazo](https://i.gyazo.com/641b1c575293533204ee4c4fbd12ab54.png)](https://gyazo.com/641b1c575293533204ee4c4fbd12ab54)
 ## 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/f784839870e1e073114e0bd7dd47db96.png)](https://gyazo.com/f784839870e1e073114e0bd7dd47db96)
-
+[![Image from Gyazo](https://i.gyazo.com/53cafb9620ed9595a298e3622d750888.png)](https://gyazo.com/53cafb9620ed9595a298e3622d750888)
 
 ## 開発環境
 
@@ -123,7 +98,7 @@ https://task-to-do-49vr.onrender.com
 
 ## 改善点
 
-・投稿する際の月が英語になっている点。
+・親がコメントできるようにユーザーの登録やコメント機能の実装
 
 ## 制作時間
 
